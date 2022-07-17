@@ -1,0 +1,34 @@
+{% extends 'base.html' %} 
+{% block title %}About Me Page.{% endblock %} 
+{% block header %}
+<!-- Page Header-->
+<header
+  class="masthead"
+  style="background-image: url({{ url_for('static', filename='assets/img/about-bg.jpg') }} )"
+>
+  <div class="container position-relative px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+      <div class="col-md-10 col-lg-8 col-xl-7">
+        <div class="page-heading">
+          <h1>About Me</h1>
+          <span class="subheading">This is what I do.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+{% endblock %}
+<!-- Main Content-->
+{% block content %}
+<main class="mb-4">
+  <div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+      <div class="col-md-10 col-lg-8 col-xl-7">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi odit aperiam, labore repellendus harum voluptatibus architecto earum vitae deleniti a recusandae asperiores quidem unde quos sunt quam! Nobis, maxime nam!</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis exercitationem ratione eos commodi voluptas consequuntur dolorem ducimus esse aliquam suscipit minus sunt doloremque assumenda voluptatibus provident animi, nisi impedit beatae.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit aspernatur ipsa soluta, possimus saepe omnis harum culpa esse, corrupti ratione alias hic animi eligendi ducimus, consequuntur quibusdam nesciunt perspiciatis? Molestias?</p>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}
