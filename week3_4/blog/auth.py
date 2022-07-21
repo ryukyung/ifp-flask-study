@@ -26,12 +26,12 @@ def login():
                 flash("Password is incorrect!", category='error')
         else:
             flash("Email does not exist...", category='error')
-    return render_template("login.html", form=form)
+    return render_template("login.html", form=form, user=current_user)
 
 @auth.route("/logout")
 def logout():
     logout_user()
-    return redirect("views.blog_home")
+    return redirect(url_for("views.home"))
 
 @auth.route("/sign-up", methods=['GET','POST'])
 # 회원가입에서 POST 요청을 처리해야 함
@@ -61,4 +61,4 @@ def signup():
             return redirect(url_for("views.home"))
             # 저장이 완료된 후 home으로 리다이렉트
             # GET 요청을 보낸다면 회원가입 템플릿을 보여줌
-    return render_template("signup.html", form=form)
+    return render_template("signup.html", form=form, user=current_user)
