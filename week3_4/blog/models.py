@@ -1,7 +1,6 @@
 # blog/models.py
 from  . import db
 from flask_login import UserMixin 
-# flask_login 라이브러리 : 플라스크에서 로그인 기능을 쉽게 구현할 수 있도록 도와주는 라이브러리
 from sqlalchemy.sql import func
 
 class User(db.Model, UserMixin):
